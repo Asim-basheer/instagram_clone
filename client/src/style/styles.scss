@@ -1,0 +1,16 @@
+// global
+@import './global/colors';
+@import './global/mixins';
+@import './global/global';
+@import './global/classes';
+
+// pages
+@import './pages/form-main';
+
+//components
+@import './components/loading';
+@import './components/leftNav';
+@import './components/modal';
+@import './components/create-post';
+@import './components/small-screen-nav-below';
+@import './components/small-screen-nav-above';

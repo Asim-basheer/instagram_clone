@@ -1,0 +1,29 @@
+.small-screen-nav-below {
+  display: none;
+  @include respond(sm) {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+
+    &__links {
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__icon {
+      font-size: 1.5rem;
+    }
+  }
+}

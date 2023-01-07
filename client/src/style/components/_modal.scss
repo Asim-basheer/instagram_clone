@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s ease-in-out 0.1s;
+  transform: scale(1.1);
+
+  &.active {
+    opacity: 1;
+    user-select: auto;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__overlay {
+    background-color: rgba($dark, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}

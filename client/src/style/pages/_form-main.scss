@@ -1,0 +1,63 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.form-img {
+  > img {
+  }
+}
+
+.form-main {
+  max-width: 350px;
+  border: 1px solid $grey;
+  padding: 2rem;
+  background-color: $white;
+
+  &__logo {
+    width: 70%;
+    margin: 0 auto 1rem;
+    text-align: center;
+    line-height: 1.5;
+
+    p {
+      color: $grey;
+      font-weight: bolder;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__input-container {
+    input {
+      width: 100%;
+      padding: 0.6rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid $grey;
+
+      &:focus,
+      &:hover {
+        border: 1px solid $grey-500;
+      }
+    }
+  }
+
+  input[type='submit'] {
+    margin: 1rem 0;
+    padding: 0.6rem 0.4rem;
+    border-radius: 6px;
+    background-color: $blue;
+    border: 1px solid $white;
+    color: $white;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.01rem;
+    text-transform: capitalize;
+  }
+}

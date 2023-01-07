@@ -9,7 +9,8 @@ export const register = (req, res) => {
 
   db.query(q, [req.body.username], (err, result) => {
     if (err) return res.status(500).json(err);
-    if (result.length) return res.status(409).json('User already exists!');
+    if (result.length) return res.status(409).send('User already exists!');
+
     //CREATE A NEW USER
 
     //Hash the password
@@ -28,7 +29,10 @@ export const register = (req, res) => {
     ];
 
     db.query(q, [values], (err, result) => {
+      if (err?.errno === 1062)
+        return res.status(409).send('email already exists!');
       if (err) return res.status(500).json(err);
+
       return res.status(200).json('User has been created.');
     });
   });

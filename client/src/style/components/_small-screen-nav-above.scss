@@ -1,0 +1,55 @@
+.small-screen-nav-above {
+  display: none;
+  @include respond(sm) {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    &__brand {
+    }
+
+    &__brand-img {
+      width: 7rem;
+    }
+
+    &__actions {
+      position: absolute;
+      right: 1.5rem;
+      top: 0.8rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    &__search-box {
+      position: relative;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid $grey-500;
+      border-radius: 0.6rem;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      &--search {
+        left: 1rem;
+      }
+
+      &--close {
+        right: 1rem;
+      }
+    }
+
+    &__icon-nav {
+      font-size: 1.6rem;
+    }
+  }
+}

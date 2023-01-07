@@ -1,0 +1,55 @@
+// impalement dark and light mode to be more specific added dark and light classes
+
+.light {
+  .text {
+    color: $dark;
+
+    &--other {
+      color: $white;
+    }
+  }
+
+  .background {
+    background-color: $whiteSoft;
+
+    &--other {
+      background-color: $dark;
+    }
+  }
+}
+
+.dark {
+  .text {
+    color: $white;
+
+    &--other {
+      color: $dark;
+    }
+  }
+
+  .background {
+    background-color: $darkSoft;
+
+    &--other {
+      background-color: $white;
+    }
+  }
+}
+
+.border {
+  border: 1px solid $grey-500;
+}
+
+.border-right {
+  border-right: 1px solid $grey-500;
+}
+.border-top {
+  border-top: 1px solid $grey-500;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
