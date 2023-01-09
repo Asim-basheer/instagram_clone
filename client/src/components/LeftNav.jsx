@@ -39,14 +39,15 @@ const LeftNav = () => {
       setMenuToggle(false);
     }
   };
+
   return (
     <>
       <nav
-        className={`left-nav background-other text-other border-right ${
+        className={`left-nav background--other border-right ${
           searchToggle ? 'active' : ''
         } ${notificationToggle ? 'active' : ''}`}
       >
-        <div className={`left-nav__container ${darkMode ? 'dark' : 'light'}`}>
+        <div className='left-nav__container'>
           <a href='/' className='left-nav__brand' onClick={handleToggle}>
             {darkMode ? (
               <img
@@ -111,7 +112,7 @@ const LeftNav = () => {
             <span className='left-nav__link-text'>more</span>
           </div>
           <div
-            className={`left-nav__menu-items   ${darkMode ? 'dark' : 'light'} ${
+            className={`left-nav__menu-items ${darkMode ? 'dark' : 'light'} ${
               menuToggle ? 'active' : ''
             }`}
           >
@@ -188,7 +189,7 @@ const LeftNav = () => {
         </div>
       </nav>
 
-      {searchToggle && (
+      {/* {searchToggle && (
         <div className='left-nav__overlay' onClick={handleToggle}></div>
       )}
       {notificationToggle && (
@@ -196,7 +197,7 @@ const LeftNav = () => {
       )}
       {menuToggle && (
         <div className='left-nav__overlay' onClick={handleToggle}></div>
-      )}
+      )} */}
 
       <Modal setHandler={setCreatePostToggle} status={createPostToggle}>
         <CreatePost />

@@ -3,23 +3,17 @@
   left: 0;
   top: 0;
   z-index: 1000;
+  height: 100vh;
 
   &__container {
     position: relative;
     padding: 0 0.6rem;
-    height: 100vh;
+    height: inherit;
     width: 250px;
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
     will-change: width;
     z-index: 1000;
-    &.dark {
-      background-color: $darkSoft;
-    }
-
-    &.light {
-      background-color: $whiteSoft;
-    }
   }
 
   &__brand {
@@ -41,6 +35,7 @@
   &__brand-img {
     width: 8rem;
     display: block;
+    transition: all 0.3s ease-in-out;
   }
 
   &__brand-icon {
@@ -100,9 +95,8 @@
     box-shadow: 1px 0px 10px -1px $grey-500;
     width: 238px;
     opacity: 0;
-    user-select: none;
     transition: all 0.3s ease-in-out;
-
+    visibility: hidden;
     &.light {
       background-color: $whiteSoft;
     }
@@ -112,8 +106,8 @@
     }
     &.active {
       opacity: 1;
-      user-select: auto;
       bottom: 8rem;
+      visibility: visible;
     }
   }
 
@@ -216,7 +210,8 @@
   }
 
   .left-nav__brand-img {
-    display: none;
+    // display: none;
+    width: 0;
   }
 
   .left-nav__brand-icon {

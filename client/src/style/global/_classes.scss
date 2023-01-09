@@ -3,17 +3,13 @@
 .light {
   .text {
     color: $dark;
-
-    &--other {
-      color: $white;
-    }
   }
 
   .background {
     background-color: $whiteSoft;
 
     &--other {
-      background-color: $dark;
+      background-color: $white;
     }
   }
 }
@@ -21,17 +17,13 @@
 .dark {
   .text {
     color: $white;
-
-    &--other {
-      color: $dark;
-    }
   }
 
   .background {
     background-color: $darkSoft;
 
     &--other {
-      background-color: $white;
+      background-color: $dark;
     }
   }
 }

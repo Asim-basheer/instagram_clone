@@ -2,13 +2,6 @@
   width: 500px;
   border-radius: 0.5rem;
 
-  &.dark {
-    background-color: $darkSoft;
-  }
-  &.light {
-    background-color: $whiteSoft;
-  }
-
   &__heading {
     padding: 1rem 0;
     text-align: center;

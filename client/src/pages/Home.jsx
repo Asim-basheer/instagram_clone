@@ -1,11 +1,5 @@
-import { ProtectedRoute } from '../components/ProtectedRoute';
-
 const Home = () => {
-  return (
-    <ProtectedRoute>
-      <div>text for dark mode</div>
-    </ProtectedRoute>
-  );
+  return <div className='content'>text for dark mode</div>;
 };
 
 export default Home;

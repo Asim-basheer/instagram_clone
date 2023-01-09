@@ -1,12 +1,8 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/darkMoodContext';
 import { MdOutlinePhotoSizeSelectActual } from 'react-icons/md';
 
 const CreatePost = () => {
-  const { darkMode } = useContext(DarkModeContext);
-
   return (
-    <div className={`create-post ${darkMode ? 'dark' : 'light'}`}>
+    <div className='create-post background--other'>
       <h3 className='create-post__heading'>Create new post</h3>
 
       <div className='create-post__body'>
