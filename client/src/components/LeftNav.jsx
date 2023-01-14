@@ -98,7 +98,11 @@ const LeftNav = () => {
               <BsPlusSquare className='left-nav__link-icon' />
               <span className='left-nav__link-text'>create</span>
             </div>
-            <a href='/' className='left-nav__link' onClick={handleToggle}>
+            <a
+              href='/profile/1'
+              className='left-nav__link'
+              onClick={handleToggle}
+            >
               <FaUserCircle className='left-nav__link-icon' />
               <span className='left-nav__link-text'>profile</span>
             </a>
@@ -140,7 +144,7 @@ const LeftNav = () => {
         </LeftNavPopLeft>
       </nav>
 
-      <nav className='small-screen-nav-below border-top background-other text-other'>
+      <nav className='small-screen-nav-below border-top background--other text'>
         <div className='small-screen-nav-below__links'>
           <a href='/' className='small-screen-nav-below__link'>
             <MdHome className='small-screen-nav-below__icon' />
@@ -151,13 +155,13 @@ const LeftNav = () => {
           >
             <BsPlusSquare className='small-screen-nav-below__icon' />
           </div>
-          <a href='/' className='small-screen-nav-below__link'>
+          <a href='/profile/1' className='small-screen-nav-below__link'>
             <FaUserCircle className='small-screen-nav-below__icon' />
           </a>
         </div>
       </nav>
 
-      <nav className='small-screen-nav-above'>
+      <nav className='small-screen-nav-above background--other text'>
         <div className='small-screen-nav-above__brand'>
           <a href='/'>
             {darkMode ? (
@@ -189,7 +193,7 @@ const LeftNav = () => {
         </div>
       </nav>
 
-      {/* {searchToggle && (
+      {searchToggle && (
         <div className='left-nav__overlay' onClick={handleToggle}></div>
       )}
       {notificationToggle && (
@@ -197,9 +201,9 @@ const LeftNav = () => {
       )}
       {menuToggle && (
         <div className='left-nav__overlay' onClick={handleToggle}></div>
-      )} */}
+      )}
 
-      <Modal setHandler={setCreatePostToggle} status={createPostToggle}>
+      <Modal setHandler={setCreatePostToggle} status={createPostToggle} close>
         <CreatePost />
       </Modal>
     </>

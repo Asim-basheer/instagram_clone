@@ -1,0 +1,135 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  border-bottom: 1px solid $grey-500;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  @include respond(sm) {
+    gap: 2rem;
+    font-size: smaller;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__name-sm {
+    display: none;
+
+    @include respond(sm) {
+      display: block;
+      text-align: center;
+      margin-top: 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+  }
+
+  &__img {
+    @include userImgSize(150px);
+
+    @include respond(sm) {
+      @include userImgSize(77px);
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 500;
+
+    @include respond(sm) {
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    & :nth-child(2) {
+      background-color: $grey-100;
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-size: smaller;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    @include respond(sm) {
+      & :nth-child(2) {
+        order: 4;
+        width: 90%;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__details {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    @include respond(sm) {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+
+    @include respond(sm) {
+      display: none;
+    }
+  }
+}
+
+.user-actions {
+  display: none;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  @include respond(sm) {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+    border-bottom: 1px solid $grey-500;
+    padding-bottom: 1rem;
+    font-size: smaller;
+    &:nth-child(1) {
+      border-bottom: 2px solid $grey;
+    }
+
+    span {
+      &:nth-child(1) {
+        font-weight: bolder;
+      }
+      &:nth-child(2) {
+        font-weight: lighter;
+      }
+    }
+  }
+}

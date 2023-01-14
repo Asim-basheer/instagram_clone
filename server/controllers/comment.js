@@ -6,7 +6,7 @@ import {
 } from '../helpers/notifications.js';
 
 export const getComments = (req, res) => {
-  const q = `SELECT c.*, u.id AS userId, username, profile_picture FROM comments AS c JOIN users AS u ON (u.id = c.user_id)
+  const q = `SELECT c.*, u.username, u.profile_picture as profilePicture FROM comments AS c JOIN users AS u ON (u.id = c.user_id)
       WHERE c.post_id = ? ORDER BY c.created_at DESC
       `;
   db.query(q, [req.query.postId], (err, data) => {

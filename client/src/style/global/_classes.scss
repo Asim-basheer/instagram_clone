@@ -45,3 +45,45 @@
   object-fit: cover;
   display: block;
 }
+
+.content {
+  width: calc(100% - 465px);
+  margin-left: 465px;
+  padding-right: 2rem;
+
+  @include respond(lg) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    padding-right: 0;
+  }
+  @include respond(xxl) {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.home {
+  display: flex;
+  gap: 2rem;
+}
+
+.pages {
+  padding-right: 7.5rem;
+  @include respond(lg) {
+    padding-right: 1rem;
+    padding-left: 6rem;
+  }
+
+  @include respond(sm) {
+    padding-right: auto;
+    padding: 0 0.4rem;
+  }
+}
+
+.account-page {
+  display: flex;
+}

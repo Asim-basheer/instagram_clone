@@ -1,0 +1,28 @@
+.edit-bar {
+  width: 250px;
+  border-right: 1px solid $grey-500;
+  &__link {
+    display: block;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    font-weight: 400;
+    &.active::before {
+      content: '';
+      position: absolute;
+      width: 1.5px;
+      height: calc(100% - 0.3rem);
+      background-color: $grey;
+      left: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      background-color: $grey-100;
+    }
+  }
+}

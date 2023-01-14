@@ -1,0 +1,47 @@
+.likes {
+  width: 470px;
+  border-radius: 0.5rem;
+  height: 350px;
+  overflow: auto;
+
+  @include respond(xs) {
+    font-size: 0.8rem;
+    width: calc(100% - 1rem);
+  }
+
+  &__head {
+    padding: 0.7rem;
+    text-align: center;
+    border-bottom: 1px solid $grey-500;
+    text-transform: capitalize;
+    font-weight: 400;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+  }
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+  }
+
+  &__user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__user-box {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__names {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}

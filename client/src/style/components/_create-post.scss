@@ -1,6 +1,11 @@
 .create-post {
-  width: 500px;
+  width: 470px;
   border-radius: 0.5rem;
+
+  @include respond(xs) {
+    font-size: 0.8rem;
+    width: calc(100% - 1rem);
+  }
 
   &__heading {
     padding: 1rem 0;

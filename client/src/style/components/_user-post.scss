@@ -1,0 +1,65 @@
+.user-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1rem;
+
+  @include respond(md) {
+    row-gap: 0.2rem;
+  }
+}
+
+.user-post {
+  position: relative;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  width: calc((100% - 2rem) / 3);
+  @include respond(md) {
+    width: calc((100% - 0.4rem) / 3);
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba($dark, 0.4);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @include respond(sm) {
+      gap: 0.5rem;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    color: $white;
+
+    svg {
+      transform: scaleX(-1);
+    }
+    span {
+      font-size: smaller;
+    }
+
+    @include respond(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  // hover effect
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+}

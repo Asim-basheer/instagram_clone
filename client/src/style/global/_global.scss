@@ -36,9 +36,9 @@ button {
 
 main {
   min-height: 100vh;
-}
+  padding: 2rem 0;
 
-.content {
-  margin-left: 435px;
-  // border: 1px solid red;
+  @include respond(sm) {
+    padding: 6rem 0;
+  }
 }

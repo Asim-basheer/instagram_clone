@@ -1,0 +1,128 @@
+.post {
+  width: 470px;
+  padding: 1rem 0;
+  border-radius: 0.6rem;
+
+  @include respond(xs) {
+    font-size: 0.8rem;
+    width: calc(100% - 1rem);
+    margin: auto;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  &__user-img {
+    @include userImgSize(35px);
+  }
+
+  &__username {
+    font-weight: bolder;
+    font-size: 0.9rem;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.7rem;
+
+    &--dots {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__body {
+  }
+
+  &__post-img {
+    padding: 1rem 0;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0 1rem;
+  }
+
+  &__like {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  &__caption {
+    line-height: 1.6;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__comments {
+    padding: 0 1rem;
+    padding-top: 0.5rem;
+    color: $grey;
+    font-size: 0.9rem;
+  }
+
+  &__date {
+    padding: 0 1rem;
+    padding-top: 0.5rem;
+    color: $grey;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  &__add-comment {
+    padding: 0 1rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-top: 1px solid $grey-500;
+  }
+
+  &__input-box {
+    flex: 1;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+
+    font-size: larger;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: $blue;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      opacity: 1;
+    }
+  }
+}

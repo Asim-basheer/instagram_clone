@@ -1,0 +1,58 @@
+.suggestions {
+  padding: 1.3rem 0;
+  width: 319px;
+
+  @include respond(md) {
+    display: none;
+  }
+  &__user-info,
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  &__user-info-img {
+    @include userImgSize(56px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__user-info-fullname {
+  }
+  &__user-info-username {
+  }
+
+  &__heading {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $grey;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+  }
+
+  &__users {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__user-img {
+    @include userImgSize(32px);
+  }
+
+  &__user-fullname {
+  }
+
+  &__user-suggested {
+    font-weight: 300;
+    color: $grey;
+  }
+}

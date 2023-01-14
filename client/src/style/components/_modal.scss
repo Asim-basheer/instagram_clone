@@ -34,5 +34,10 @@
     top: 2rem;
     font-size: 2rem;
     cursor: pointer;
+
+    @include respond(sm) {
+      right: 1rem;
+      top: 5rem;
+    }
   }
 }

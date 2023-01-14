@@ -6,8 +6,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { DarkModeContext } from './context/darkMoodContext';
-import Profile from './components/Profile';
+import Profile from './pages/Profile';
 import { ProtectedRoute } from './components/ProtectedRoute';
+import EditAccount from './pages/EditAccount';
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -41,6 +42,10 @@ const App = () => {
         {
           path: '/profile/:id',
           element: <Profile />,
+        },
+        {
+          path: 'account/edit/:id',
+          element: <EditAccount />,
         },
       ],
     },

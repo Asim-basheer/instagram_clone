@@ -1,0 +1,29 @@
+.details-post {
+  width: 400px;
+  border-radius: 0.5rem;
+
+  @include respond(xs) {
+    width: calc(100% - 1rem);
+    margin: auto;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+    &:hover {
+      background-color: $grey-100;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-500;
+    }
+    &--red {
+      color: $red;
+    }
+  }
+}
